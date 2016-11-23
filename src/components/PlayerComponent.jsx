@@ -105,7 +105,6 @@ class Player extends Component {
             </div>
           </div>
           <button className="js-trigger-overlay-about commandsBar" onClick={ this.displayCommands.bind(this) } data-toggle="modal" data-target="#commandModal" type="button">commands</button>
-          <Scrollchor to="navbar" className="nav-link"><button className="js-trigger-overlay-about" type="button">about</button></Scrollchor>
 
           <hr></hr>
 
