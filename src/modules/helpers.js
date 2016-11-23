@@ -39,12 +39,12 @@ export const searchSong = (query, songName, artistName, task) => {
                   videoId: srchItem.id.videoId,
                   title: srchItem.snippet.title,
                   artwork: spotifyArtwork,
-                  albumName: albumName,
-                  songName: songName,
-                  artistName: artistName,
-                  artistId: artistId,
                   countries: countriesArr,
-                  request: 'playNow'
+                  request: 'playNow',
+                  albumName,
+                  songName,
+                  artistName,
+                  artistId
                 }
               });
             } else if (task === 'queueSong') {
@@ -53,11 +53,11 @@ export const searchSong = (query, songName, artistName, task) => {
                 songQueue: srchItem.id.videoId,
                 title: srchItem.snippet.title,
                 artwork: spotifyArtwork,
-                albumName: albumName,
-                songName: songName,
-                artistName: artistName,
-                countries: countriesArr,
-                artistId: artistId,
+                albumName,
+                songName,
+                artistName,
+                countriesArr,
+                artistId
               });
             }
           });
@@ -77,27 +77,26 @@ export const communicateAction = (text) => {
     $('#conversationPlayer').css({ opacity: 0.0, visibility: 'visible' }).animate({ opacity: 0.6 }, 1200);
 
     setTimeout(() => {
-      $('#conversationPlayer').css('opacity', "0.6").animate({ opacity: 0 }, 1200, () => {
-        $('#conversationPlayer').css("visibility", "hidden");
+      $('#conversationPlayer').css('opacity', '0.6').animate({ opacity: 0 }, 1200, () => {
+        $('#conversationPlayer').css('visibility', 'hidden');
       });
     }, 2000);
   }
 };
 
 export const errorMessage = (text) => {
-    var recP = document.getElementById('conversationPlayer');
-    if (recP) {
-      recP.innerHTML = text;
-      $('#conversationPlayer').css({opacity: 0.0, visibility: "visible"}).animate({opacity: 0.6}, 1200); 
+  const recP = document.getElementById('conversationPlayer');
+  if (recP) {
+    recP.innerHTML = text;
+    $('#conversationPlayer').css({ opacity: 0.0, visibility: 'visible' }).animate({ opacity: 0.6 }, 1200);
 
-      setTimeout(function () {
-      $('#conversationPlayer').css("opacity", "0.6").animate({opacity: 0}, 1200, function(){
-        $('#conversationPlayer').css("visibility", "hidden");
+    setTimeout(() => {
+      $('#conversationPlayer').css('opacity', '0.6').animate({ opacity: 0 }, 1200, () => {
+        $('#conversationPlayer').css('visibility', 'hidden');
       });
-        
-      },2000);
-    }
-  };
+    }, 2000);
+  }
+};
 
 export const dequeueSong = () => {
   if (store.getState().songQueue.length > 0) {
@@ -145,22 +144,20 @@ export const unMuteSong = () => {
 };
 
 export const increaseVolume = (previousVolume) => {
-  var el = document.getElementById('volumebar');
-  el.value=previousVolume;
-  el.dispatchEvent(new Event('input', {bubbles: true}));
-  setTimeout(function () {
-    $('#helpBar').css({opacity: 0.0, visibility: "visible"}).animate({opacity: 0.6}, 1200);
-  }, 3000)
-
-
+  const el = document.getElementById('volumebar');
+  el.value = previousVolume;
+  el.dispatchEvent(new Event('input', { bubbles: true }));
+  setTimeout(() => {
+    $('#helpBar').css({ opacity: 0.0, visibility: 'visible' }).animate({ opacity: 0.6 }, 1200);
+  }, 3000);
 };
 
 export const decreaseVolume = () => {
-  var el = document.getElementById('volumebar');
-  var previousVolume = el.value;
-  console.log(previousVolume)
-  el.value='10';
-  el.dispatchEvent(new Event('input', {bubbles: true}));
-  setTimeout(function () {
-    increaseVolume(previousVolume) }, 4000);
+  const el = document.getElementById('volumebar');
+  const previousVolume = el.value;
+  el.value = '10';
+  el.dispatchEvent(new Event('input', { bubbles: true }));
+  setTimeout(() => {
+    increaseVolume(previousVolume);
+  }, 4000);
 };

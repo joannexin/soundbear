@@ -28,131 +28,131 @@ export const annyangCall = () => {
 
   // Defines commands
   if (annyang) {
-    var commands = {
-      'display top ten': function () {
+    const commands = {
+      'display top ten': () => {
         document.getElementById('react-tabs-2').click();
         helpers.communicateAction('Display top ten');
       },
 
-      'display lyrics': function () {
+      'display lyrics': () => {
         document.getElementById('react-tabs-0').click();
         helpers.communicateAction('Display lyrics');
       },
 
-      'display popular': function () {
+      'display popular': () => {
         document.getElementById('react-tabs-4').click();
         helpers.communicateAction('Display popular songs');
       },
 
-      'display albums': function () {
+      'display albums': () => {
         document.getElementById('react-tabs-6').click();
         helpers.communicateAction('Display artist\'s albums');
       },
 
-      'display related': function () {
+      'display related': () => {
         document.getElementById('react-tabs-8').click();
         helpers.communicateAction('Display related artists');
       },
 
-      'sound': function () {
+      'sound': () => {
         helpers.decreaseVolume();
       },
 
-      'sound bear': function () {
+      'sound bear': () => {
         helpers.decreaseVolume();
       },
 
-      'stop': function () {
-          document.getElementById('player-pause').click();
-          helpers.communicateAction('Stop');
+      'stop': () => {
+        document.getElementById('player-pause').click();
+        helpers.communicateAction('Stop');
       },
 
-      'pause': function () {
-          document.getElementById('player-pause').click();
-          helpers.communicateAction('Pause');
+      'pause': () => {
+        document.getElementById('player-pause').click();
+        helpers.communicateAction('Pause');
       },
 
-      'resume': function () {
+      'resume': () => {
         document.getElementById('player-play').click();
         helpers.communicateAction('Resume');
       },
 
-      'continue': function () {
+      'continue': () => {
         document.getElementById('player-play').click();
         helpers.communicateAction('Continue');
       },
 
-      'forward': function () {
+      'forward': () => {
         document.getElementById('player-forward').click();
         helpers.communicateAction('Forward');
       },
 
-      'backward': function () {
+      'backward': () => {
         document.getElementById('player-backward').click();
         helpers.communicateAction('Backward');
       },
 
-      'mute song': function () {
+      'mute song': () => {
         helpers.muteSong();
       },
 
-      'unmute song': function () {
+      'unmute song': () => {
         helpers.unMuteSong();
       },
 
-      'play next song': function () {
+      'play next song': () => {
         helpers.dequeueSong();
       },
 
-      'play previous song': function () {
+      'play previous song': () => {
         helpers.playPrevious();
       },
 
-      'restart song': function() {
+      'restart song': () => {
         helpers.restartSong();
       },
 
-      'play track *song': function (song) {
+      'play track *song': (song) => {
         helpers.communicateAction('Play track ' + song);
         playSong(song);
       },
 
-      'play *song by *artist': function (song, artist) {
+      'play *song by *artist': (song, artist) => {
         helpers.communicateAction('Play song ' + song + ' by ' + artist);
         playSong(song, artist);
       },
 
-      'play song *song': function (song) {
+      'play song *song': (song) => {
         helpers.communicateAction('Play song ' + song);
         playSong(song);
       },
 
-      'play *song': function (song) {
+      'play *song': (song) => {
         helpers.communicateAction('Play ' + song);
         playSong(song);
       },
 
-      'add next *song by *artist': function (song, artist) {
+      'add next *song by *artist': (song, artist) => {
         helpers.communicateAction('Add next ' + song +' by ' + artist);
         addToQueue(song, artist);
       },
 
-      'add next *song': function (song) {
+      'add next *song': (song) => {
         helpers.communicateAction('Add next ' + song);
         addToQueue(song);
       },
 
-      'add to queue *song by *artist': function (song, artist) {
+      'add to queue *song by *artist': (song, artist) => {
         helpers.communicateAction('Add to queue ' + song +' by ' + artist);
         addToQueue(song, artist);
       },
 
-      'add to queue *song': function (song) {
+      'add to queue *song': (song) => {
         helpers.communicateAction('Add to queue ' + song);
         addToQueue(song);
       },
 
-      ':nomatch': function (message) {
+      ':nomatch': (message) => {
         helpers.errorMessage('Sorry, I don\'t understand this action: ' + message);
       }
     };
@@ -164,7 +164,7 @@ export const annyangCall = () => {
     annyang.start({ autoRestart: false, continuous: false });
   }
 
-  annyang.addCallback('error', function () {
+  annyang.addCallback('error', () => {
     helpers.errorMessage('Oops! Something isn\'t right...');
   });
 };
