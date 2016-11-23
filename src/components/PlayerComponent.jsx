@@ -1,17 +1,17 @@
-  import React, { Component } from 'react';
+import $ from 'jquery';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ControlBar from './ControlBarComponent';
-import MostPopular from './MostPopularComponent';
-import Lineup from './LineupComponent';
 import * as helpers from '../modules/ajax';
 import * as newHelpers from '../modules/helpers';
 import { annyangCall } from '../annyang';
 import { initiateQueue, initiateHistory, changeCurrentSong, addToQueue, dequeueSong, addToHistory, toggleRestartToFalse } from '../redux/actions';
 import Song from '../modules/Song';
 import map from '../visualization/map';
-import $ from 'jquery';
 import Scrollchor from 'react-scrollchor';
 import KeyHandler, {KEYPRESS} from 'react-key-handler';
+import ControlBar from './ControlBarComponent';
+import MostPopular from './MostPopularComponent';
+import Lineup from './LineupComponent';
 
 class Player extends Component {
 
@@ -22,19 +22,19 @@ class Player extends Component {
     };
   }
 
-  searchFromPlayer() {
-    helpers.youTubeGetSong($('#srch-term').val(), (response) => {
-      var searchedSong = new Song(response.items[0].id.videoId, response.items[0].snippet.title, response.items[0].snippet.thumbnails.default.url);
-      this.props.changeCurrentSong(searchedSong);
-    });
-  }
-
-  queueSong(string) {
-    helpers.youTubeGetSong(string = $('#srch-term').val(), (response) => {
-      var queuedSong = new Song(response.items[0].id.videoId, response.items[0].snippet.title, response.items[0].snippet.thumbnails.default.url);
-      this.props.addToQueue(queuedSong);
-    });
-  }
+  // searchFromPlayer() {
+  //   helpers.youTubeGetSong($('#srch-term').val(), (response) => {
+  //     var searchedSong = new Song(response.items[0].id.videoId, response.items[0].snippet.title, response.items[0].snippet.thumbnails.default.url);
+  //     this.props.changeCurrentSong(searchedSong);
+  //   });
+  // }
+  //
+  // queueSong(string) {
+  //   helpers.youTubeGetSong(string = $('#srch-term').val(), (response) => {
+  //     var queuedSong = new Song(response.items[0].id.videoId, response.items[0].snippet.title, response.items[0].snippet.thumbnails.default.url);
+  //     this.props.addToQueue(queuedSong);
+  //   });
+  // }
 
   componentDidMount() {
 
@@ -44,7 +44,7 @@ class Player extends Component {
         $('#helpBar').css("opacity", "0.6").animate({opacity: 0}, 400, function(){
           $('#helpBar').css("visibility", "hidden");
         });
-         
+
         annyangCall();
         console.log('what up');
         e.stopPropagation();
