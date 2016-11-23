@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Droppable } from 'react-drag-and-drop';
-import Nav from './NavComponent';
 import { addToHistory, dequeueSong, changeCurrentSong, playPrevious, removeFromHistory } from '../redux/actions';
 
 class ControlBar extends Component {
@@ -184,12 +183,7 @@ class ControlBar extends Component {
         </div>
 
         <br></br>
-
-        <div id="navbar" className="row controlDiv">
-          <Nav />
-        </div>
-
-
+        
       </div>
     );
   }
