@@ -13,6 +13,7 @@ import ControlBar from './ControlBarComponent';
 import MostPopular from './MostPopularComponent';
 import Lineup from './LineupComponent';
 import Command from './CommandComponent';
+import Nav from './NavComponent';
 
 class Player extends Component {
 
@@ -140,13 +141,11 @@ class Player extends Component {
 
         <ControlBar player={ player } />
 
-        <hr></hr>
-
-        <br></br>
-
         <Command />
 
-        <br></br>
+        <div id="navbar" className="row controlDiv">
+          <Nav />
+        </div>
 
       </div>
     );
