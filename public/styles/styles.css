@@ -10,7 +10,6 @@ html, body {
 
 .modal-dialog {
   position: relative;
-  /*top: 100px;*/
 }
 
 .centerAlign {
@@ -177,7 +176,7 @@ tr.first > td {
 }
 
 #elapsedTime {
-  right: 50px;
+  /*right: 50px;*/
   top: 20px;
 }
 
