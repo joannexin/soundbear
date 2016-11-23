@@ -22,20 +22,6 @@ class Player extends Component {
     };
   }
 
-  // searchFromPlayer() {
-  //   helpers.youTubeGetSong($('#srch-term').val(), (response) => {
-  //     var searchedSong = new Song(response.items[0].id.videoId, response.items[0].snippet.title, response.items[0].snippet.thumbnails.default.url);
-  //     this.props.changeCurrentSong(searchedSong);
-  //   });
-  // }
-  //
-  // queueSong(string) {
-  //   helpers.youTubeGetSong(string = $('#srch-term').val(), (response) => {
-  //     var queuedSong = new Song(response.items[0].id.videoId, response.items[0].snippet.title, response.items[0].snippet.thumbnails.default.url);
-  //     this.props.addToQueue(queuedSong);
-  //   });
-  // }
-
   componentDidMount() {
 
     document.addEventListener('keydown', function(e) {
@@ -46,7 +32,6 @@ class Player extends Component {
         });
 
         annyangCall();
-        console.log('what up');
         e.stopPropagation();
         e.preventDefault();
       }
