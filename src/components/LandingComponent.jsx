@@ -54,9 +54,7 @@ class Landing extends Component {
           <LandingFeature />
         </div>
 
-        <div>
-          <Git />
-        </div>
+        <Git />
 
       </div>
     );
