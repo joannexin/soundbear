@@ -149,10 +149,14 @@ export const increaseVolume = (previousVolume) => {
   el.dispatchEvent(new Event('input', { bubbles: true }));
   setTimeout(() => {
     $('#helpBar').css({ opacity: 0.0, visibility: 'visible' }).animate({ opacity: 0.6 }, 1200);
+
   }, 3000);
 };
 
 export const decreaseVolume = () => {
+  
+
+
   const el = document.getElementById('volumebar');
   const previousVolume = el.value;
   el.value = '10';

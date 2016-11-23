@@ -192,3 +192,13 @@ tr.first > td {
   letter-spacing: 0.3px;
   opacity: 0.6;
 }
+
+#listening {
+  visibility: hidden;
+  opacity: 0.0;
+}
+
+#listenDiv, #listening, #conversationDiv{
+  margin-top: 0;
+  margin-bottom: 0;
+}

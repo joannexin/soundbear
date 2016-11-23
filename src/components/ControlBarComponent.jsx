@@ -167,9 +167,14 @@ class ControlBar extends Component {
           </div>
         </div>
 
-        <div className="row controlBar">
+        <div id='conversationDiv' className="row controlBar">
           <div id="conversationPlayer" className="col-md-offset-3 col-md-6"></div>
         </div>
+
+        <div id = 'listenDiv' className="row controlBar">
+          <div id='listening' className="firstLine col-md-offset-3 col-md-6">Listening...</div>
+        </div>
+
          <div id="helpBar" className="row controlBar">
           <div className="instructionDiv firstLine col-md-offset-3 col-md-6">Press <i>spacebar</i> and start talking to soundBear</div>
           <div  className=" instructionDiv col-md-offset-3 col-md-6">Select "<i>commands</i>" from the menu bar for help</div>
