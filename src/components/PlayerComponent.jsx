@@ -19,9 +19,6 @@ class Player extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      infoClicked: false
-    };
   }
 
   componentDidMount() {
@@ -65,20 +62,10 @@ class Player extends Component {
       }
     }
     this.props.initiateQueue();
-
-    setInterval(() => {
-      if (!this.state.infoClicked) {
-        $('#info').fadeOut(500);
-        $('#info').fadeIn(500);
-      }
-    }, 1000);
   }
 
   displayCommands() {
     $('.player').css('filter', 'blur(2px)');
-    this.setState({
-      infoClicked: true
-    });
   }
 
   componentDidUpdate() {
