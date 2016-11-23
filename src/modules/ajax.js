@@ -21,7 +21,7 @@ export const getLyrics = (track, artist, cb) => {
   $.ajax({
     method: 'POST',
     url: '/lyrics',
-    data: { artist: artist, track: track }
+    data: { artist, track }
   })
   .done((data) => {
     cb(data);
@@ -44,7 +44,7 @@ export const albumInfo = (id) => {
     $.ajax({
       method: 'POST',
       url: '/albumInfo',
-      data: { id: id }
+      data: { id }
     })
     .done((data) => {
       resolve(data);
@@ -57,7 +57,7 @@ export const artistInfo = (id) => {
     $.ajax({
       method: 'POST',
       url: '/artistInfo',
-      data: { id: id }
+      data: { id }
     })
     .done((data) => {
       resolve(data);
@@ -81,7 +81,7 @@ export const relatedTree = (artistId, excludeList) => {
     $.ajax({
       method: 'POST',
       url: '/artistsTree',
-      data: { artistId: artistId, excludeList: excludeList}
+      data: { artistId, excludeList }
     })
     .done((data) => {
       resolve(data);
