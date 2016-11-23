@@ -125,6 +125,7 @@ class ControlBar extends Component {
       that.totalDuration();
       setInterval(function() {
         that.currentDuration();
+        that.totalDuration();
       }, 500);
     }, 1000);
   }
@@ -188,7 +189,7 @@ class ControlBar extends Component {
         </div>
 
         <br></br>
-        
+
       </div>
     );
   }
