@@ -196,5 +196,9 @@ tr.first > td {
 #listening {
   visibility: hidden;
   opacity: 0.0;
+}
 
+#listenDiv, #listening, #conversationDiv{
+  margin-top: 0;
+  margin-bottom: 0;
 }

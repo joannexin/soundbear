@@ -167,11 +167,11 @@ class ControlBar extends Component {
           </div>
         </div>
 
-        <div className="row controlBar">
+        <div id='conversationDiv' className="row controlBar">
           <div id="conversationPlayer" className="col-md-offset-3 col-md-6"></div>
         </div>
 
-        <div className="row controlBar">
+        <div id = 'listenDiv' className="row controlBar">
           <div id='listening' className="firstLine col-md-offset-3 col-md-6">Listening...</div>
         </div>
 
