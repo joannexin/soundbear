@@ -30,6 +30,17 @@ class Player extends Component {
           $('#helpBar').css("visibility", "hidden");
         });
 
+        var interval = setInterval(function () {
+          $('#listening').css("opacity", "0.6").animate({opacity: 0}, 1000, function(){
+            $('#listening').css("visibility", "hidden");
+          });
+          $('#listening').css({ opacity: 0.0, visibility: 'visible' }).animate({ opacity: 0.6 }, 1000);
+        }, 1000);
+
+        setTimeout(function () {
+          clearInterval(interval);
+        }, 5000);
+
         annyangCall();
         e.stopPropagation();
         e.preventDefault();

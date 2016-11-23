@@ -192,3 +192,9 @@ tr.first > td {
   letter-spacing: 0.3px;
   opacity: 0.6;
 }
+
+#listening {
+  visibility: hidden;
+  opacity: 0.0;
+
+}
