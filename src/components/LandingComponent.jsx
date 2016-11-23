@@ -31,7 +31,7 @@ class Landing extends Component {
           </div>
         </div>
 
-        <Scrollchor to="landingFeature" className="nav-link"><button className="js-trigger-overlay-about" type="button">about</button></Scrollchor>
+        <Scrollchor to="aboutus" className="nav-link"><button className="js-trigger-overlay-about" type="button">about</button></Scrollchor>
 
         <hr></hr>
 
@@ -54,7 +54,9 @@ class Landing extends Component {
           <LandingFeature />
         </div>
 
-        <Git />
+        <div id="aboutus">
+          <Git />
+        </div>
 
       </div>
     );
