@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { switchViewToPlayer } from '../redux/actions';
+import { annyangCall } from '../annyang';
 import * as helpers from '../modules/ajax';
 import Song from '../modules/Song';
-import { annyangCall } from '../annyang';
+import Scrollchor from 'react-scrollchor';
 import { tree }  from '../visualization/artists-tree';
 import LandingFeature from './LandingFeatureComponent';
 import Git from './GitComponent';
-import Scrollchor from 'react-scrollchor';
+
 
 
 class Landing extends Component {
@@ -29,7 +30,7 @@ class Landing extends Component {
             <a href="/"><img id="logo" src={'/assets/logo.png'}/><p>soundBear.</p></a>
           </div>
         </div>
-        
+
         <Scrollchor to="landingFeature" className="nav-link"><button className="js-trigger-overlay-about" type="button">about</button></Scrollchor>
 
         <hr></hr>
@@ -52,9 +53,6 @@ class Landing extends Component {
         <div id="landingFeature">
           <LandingFeature />
         </div>
-
-
-        <br/>
 
         <Git />
 
