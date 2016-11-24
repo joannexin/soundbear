@@ -53,10 +53,10 @@ export const searchSong = (query, songName, artistName, task) => {
                 songQueue: srchItem.id.videoId,
                 title: srchItem.snippet.title,
                 artwork: spotifyArtwork,
+                countries: countriesArr,
                 albumName,
                 songName,
                 artistName,
-                countriesArr,
                 artistId
               });
             }
@@ -154,7 +154,7 @@ export const increaseVolume = (previousVolume) => {
 };
 
 export const decreaseVolume = () => {
-  
+
 
 
   const el = document.getElementById('volumebar');
