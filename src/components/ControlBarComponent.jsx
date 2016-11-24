@@ -180,12 +180,14 @@ class ControlBar extends Component {
           <div className="instructionDiv firstLine col-md-offset-3 col-md-6">Press <i>spacebar</i> and start talking to soundBear</div>
           <div  className=" instructionDiv col-md-offset-3 col-md-6">Select "<i>commands</i>" from the menu bar for help</div>
         </div>
-        <div className="row controlBar">
-          <div id="elapsedTime" className="col-md-offset-11 col-md-1">{this.state.currentTime} / {this.state.totalTime}</div>
-        </div>
 
+        <br></br>
+        
         <div className="row progress-wrap" onClick={ this.progress.bind(this) }>
           <div className="progress-bar"></div>
+        </div>
+        <div className="row controlBar">
+          <div id="elapsedTime">{this.state.currentTime} / {this.state.totalTime}</div>
         </div>
 
         <br></br>
