@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { switchViewToPlayer } from '../redux/actions';
@@ -12,6 +13,17 @@ import Git from './GitComponent';
 
 
 class Landing extends Component {
+
+  componentDidMount() {
+    var that = this;
+    document.addEventListener('keydown', function(e) {
+      if(e.keyCode === 32) {
+        e.stopPropagation();
+        e.preventDefault();
+        that.annyang();
+      }
+    }, true);
+  }
 
   annyang () {
     annyangCall();
