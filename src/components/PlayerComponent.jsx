@@ -110,39 +110,42 @@ class Player extends Component {
     return (
       <div className="container">
         <div className="player">
-          <div className="heading row">
-            <div className="col-md-1 inline" id='headlogo'>
-              <a href="/"><img id="logo" src={'/assets/logo.png'}/><p>soundBear.</p></a>
+          <div>
+            <div className="heading row">
+              <div className="col-md-1 inline" id='headlogo'>
+                <a href="/"><img id="logo" src={'/assets/logo.png'}/><p>soundBear.</p></a>
+              </div>
+            </div>
+            <button className="js-trigger-overlay-about commandsBar" onClick={ this.displayCommands.bind(this) } data-toggle="modal" data-target="#commandModal" type="button">commands</button>
+            <Scrollchor to="navbar" className="nav-link"><button className="js-trigger-overlay-about" type="button">about</button></Scrollchor>
+            
+            <hr></hr>
+
+            <br></br>
+
+            <div className="row">
+              <div className="col-md-4 col-md-offset-4">
+                <p id="currentTrack"> { this.props.currentSong.artistName } - { this.props.currentSong.songName } </p>
+                <p id="currentTrack"> { this.props.currentSong.albumName } </p>
+              </div>
             </div>
           </div>
-          <button className="js-trigger-overlay-about commandsBar" onClick={ this.displayCommands.bind(this) } data-toggle="modal" data-target="#commandModal" type="button">commands</button>
 
-          <hr></hr>
+          <br></br>
+          <br></br>
+
+          <Lineup />
 
           <br></br>
 
-          <div className="row">
-            <div className="col-md-4 col-md-offset-4">
-              <p id="currentTrack"> { this.props.currentSong.artistName } - { this.props.currentSong.songName } </p>
-              <p id="currentTrack"> { this.props.currentSong.albumName } </p>
-            </div>
+          <ControlBar player={ player } />
+
+          <div id="navbar" className="row controlDiv">
+            <Nav />
           </div>
         </div>
 
-        <br></br>
-        <br></br>
-
-        <Lineup />
-
-        <br></br>
-
-        <ControlBar player={ player } />
-
         <Command />
-
-        <div id="navbar" className="row controlDiv">
-          <Nav />
-        </div>
 
       </div>
     );
