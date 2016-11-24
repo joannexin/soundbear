@@ -43,7 +43,7 @@ class Landing extends Component {
           </div>
         </div>
 
-        <Scrollchor to="aboutus" className="nav-link"><button className="js-trigger-overlay-about" type="button">about</button></Scrollchor>
+        <Scrollchor to="aboutus" className="nav-link"><button className="js-trigger-overlay-about" type="button">about us</button></Scrollchor>
 
         <hr></hr>
 
