@@ -1,0 +1,46 @@
+#team {
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  font-size: 40px;
+}
+
+.gitPic {
+  height: 168px;
+  border-radius: 50%;
+    cursor: pointer;
+}
+
+.gitdiv {
+  cursor: pointer;
+}
+
+.gitdiv:hover .gitPic{
+  -moz-box-shadow: 0 0 20px #adadad;
+  -webkit-box-shadow: 0 0 20px #adadad;
+  box-shadow: 0 0 20px #adadad; 
+  height: 168.5px;
+}
+
+.git {
+  margin-top: 100px;
+  text-align: center;
+  height: 520px;
+  background-color: #ffe1bd;
+  overflow: hidden;
+  width: 500%;
+  margin-left: -200%; 
+}
+
+.footer {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px
+
+}
+
+.inner {
+  width: 20%;
+  margin: 0 auto; 
+}
+

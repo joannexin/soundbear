@@ -1,0 +1,76 @@
+#albumImg {
+  height: 150px;
+
+}
+
+
+.mapHeader, .albumsHeader {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #d9894f;
+  font-weight: bold;
+
+}
+.mapHeader {
+  margin-left: 120px
+}
+.albumsHeader {
+  margin-left: 130px
+}
+
+
+.genAlbums  {
+  height: 600px; 
+  width: 500px;
+  overflow-y: scroll; 
+  margin-left: 50px;
+  position: relative;
+}
+
+.datamap {
+  width: 80%;
+  height: 100%;
+  float:left;
+}
+
+#basic_choropleth {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.eachAlbum {
+  margin-bottom: 10px;
+  font-size: 12px;
+  height: 180px;
+  width: 450px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ffe1bd
+}
+
+#albumRelease p{
+  font-style: italic;
+  display: inline;
+  margin:0;
+}
+
+#albumCopyright {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#albumName {
+  color: #d9894f;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+#albumImg {
+  float: left;
+  margin-left: 15px;
+
+}

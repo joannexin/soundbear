@@ -1,0 +1,102 @@
+.play-button img.fa-play {
+  display: none;
+}
+
+.progress-wrap {
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  height: 5px;
+  border-radius: 25px;
+  background-color: #a0a7af;
+  overflow: hidden;
+}
+
+.progress-bar {
+  -webkit-transition: width 200ms linear;
+  -moz-transition: width 200ms linear;
+  -o-transition: width 200ms linear;
+  transition: width 200ms linear;
+  display: block;
+  height: 100%;
+  width: 0%;
+  max-width: 100%;
+  background-color: #ffe1bd;
+  border-radius: 25px;
+    margin: 0 auto;
+}
+
+.controlDiv{
+  text-align: center;
+  position: relative;
+}
+
+.controlBar {
+  text-align: center;
+}
+
+.buttons {
+  display: inline;
+  margin: 30px;
+}
+
+.audio-player-buttons {
+  position: relative;
+}
+
+.volumeDiv {
+  display: inline-block;
+  position: relative;
+}
+
+.volumeDiv img#mute {
+  display: none;
+}
+
+#volumebar {
+  display: inline;
+  visibility: hidden;
+  opacity:0;
+  transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+  width: 70px;
+  margin-left: -10px;
+}
+
+.volumeDiv:hover #volumebar {
+  visibility: visible;
+  opacity:1;
+  transition-delay:0s;
+  bottom: 20px;
+}
+
+#playlist, #worldMap, #audacity, #uncheck, #tournament {
+  height: 40px;
+  width: 40px;
+}
+#fastBackward, #player-play, #player-pause, #stop, #fastForward, #unmute, #mute {
+  height: 30px;
+  width: 30px;
+}
+
+#conversationPlayer {
+  height: 50px;
+  margin-bottom: 0
+}
+
+.audio-player-side-buttons {
+  width: 190px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .audio-player-side-buttons {
+    position: static;
+    margin: 0 auto;
+    padding-left: 100px;
+    width: 300px;
+  }
+}

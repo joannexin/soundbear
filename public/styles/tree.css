@@ -1,0 +1,19 @@
+.node {
+  cursor: pointer;
+}
+
+.node text {
+  font-size: 12px;
+}
+
+.link {
+  fill: none;
+  stroke: #ffe1bd;
+  stroke-width: 1.5px;
+}
+
+.templink {
+  fill: none;
+  stroke: red;
+  stroke-width: 3px;
+}

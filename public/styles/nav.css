@@ -1,0 +1,30 @@
+.navlist {
+  text-align: center;
+}
+
+.nav {
+  margin: 30px 30px;
+}
+
+#navlyrics {
+  display: none;
+}
+
+.react-tabs [role=tablist] {
+  border-bottom: 3px solid #ffe1bd;
+}
+
+.react-tabs [role=tab] {
+  border: 3px solid transparent;
+  border-bottom: none;
+  bottom: -3px;
+  margin-top: 10px
+}
+
+.react-tabs [role=tab][aria-selected=true] {
+  border-color: #ffe1bd;
+}
+
+.area {
+  height: 722px;
+}

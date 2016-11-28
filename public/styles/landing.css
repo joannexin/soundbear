@@ -1,0 +1,134 @@
+
+
+#logo {
+  height: 40px;
+  right: 0;
+  margin-left: -7px;
+}
+
+#siri {
+  height: 80px;
+  display: none;
+  margin-top: -5px;
+}
+
+
+#help {
+  display: none;
+  font-size: 18px;
+  font-style: italic;
+}
+
+#spinner{
+  display: none;
+  margin: auto auto;
+  margin-top: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+p {
+  margin-left: -25px;
+  color: black;
+}
+
+a:focus, a:hover {
+  text-decoration: none;
+}
+
+#soundbear {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 0;
+  margin-left: 9px
+}
+
+#description {
+  font-family: inherit;
+  margin-bottom: 80px
+}
+#mainunderline {
+  margin-left: 1px;
+  margin-bottom: 17px
+}
+#headlogo {
+  padding-left: 20px
+}
+.body {
+  height: 500px;
+  background-color: #ffe1bd;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.title {
+  margin-bottom: 60px;
+  margin-top: 70px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.inline {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+
+.text-mainunderline {
+  margin-bottom: 25px;
+}
+
+.btn-danger {
+  background-color: #d9894f;
+  border-color: #d9894f;
+}
+
+.js-trigger-overlay-about {
+  float: right;
+  margin-top: -50px;
+  font-size: 2.0rem;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  color: #d9894f;
+  border-color: #d9894f;
+  font-weight: 300;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  outline: 0;
+}
+
+.commands {
+  margin-right: 100px;
+}
+
+.js-trigger-overlay-about:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.js-trigger-overlay-start {
+  margin: 0 auto;
+  font-size: 2.0rem;
+  padding: 1rem 2rem;
+  background-color: black;
+  border: 1px solid transparent;
+  color: #ffffff;
+  font-weight: 300;
+  -webkit-border-radius: 3px;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  outline: 0;
+}
+
+.js-trigger-overlay-start:hover {
+  background-color: #ffffff;
+  color: #d9894f;
+  border-color: #d9894f;
+}
