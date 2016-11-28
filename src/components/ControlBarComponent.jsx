@@ -131,10 +131,12 @@ class ControlBar extends Component {
   }
 
   componentDidUpdate() {
-    if (this.props.player.getVideoData().video_id !== this.props.currentSong.videoId) {
-      $('.fa-play').hide();
-      $('.fa-pause').show();
-    }
+    if(this.props.player.getVideoData) {
+      if (this.props.player && this.props.player.getVideoData().video_id !== this.props.currentSong.videoId) {
+        $('.fa-play').hide();
+        $('.fa-pause').show();
+      }
+    }  
   }
 
   render() {
@@ -182,7 +184,7 @@ class ControlBar extends Component {
         </div>
 
         <br></br>
-        
+
         <div className="row progress-wrap" onClick={ this.progress.bind(this) }>
           <div className="progress-bar"></div>
         </div>
