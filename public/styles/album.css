@@ -39,8 +39,8 @@
   margin: 0 auto;
   position: relative;
 }
+
 .eachAlbum {
-/*  background-color: rgba(217,219,223, 0.4);*/
   margin-bottom: 10px;
   font-size: 12px;
   height: 180px;
@@ -48,9 +48,8 @@
   border-style: solid;
   border-width: 1px;
   border-color: #ffe1bd
-
-
 }
+
 #albumRelease p{
   font-style: italic;
   display: inline;

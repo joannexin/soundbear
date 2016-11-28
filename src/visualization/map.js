@@ -26,20 +26,6 @@ const map = function (array) {
     data: data
   });
 
-  // var colors = d3.scale.category10();
-
-  // var randomColoring = {}
-  // var step = [10, 50, 100];
-
-
-  // window.setInterval(function() {
-  //   for (var elem of convertedCodes) {
-  //     var random = Math.floor(Math.random() * 2);
-  //     randomColoring[elem] = colors(Math.random() * step[random]);
-  //   }
-
-  //   basic_choropleth.updateChoropleth(randomColoring);
-  // }, 2000);
 }
 
 export default map;

@@ -96,5 +96,3 @@ getId: function () {
 }
 
 }
-
-// export default processData;

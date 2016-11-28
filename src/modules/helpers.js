@@ -154,9 +154,6 @@ export const increaseVolume = (previousVolume) => {
 };
 
 export const decreaseVolume = () => {
-
-
-
   const el = document.getElementById('volumebar');
   const previousVolume = el.value;
   el.value = '10';

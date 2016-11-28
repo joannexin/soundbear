@@ -16,7 +16,6 @@ class History extends Component {
 
   render() {
     var reverseSongHistory = [null, null, null, null, null];
-    // console.log(this.props.songHistory);
     for (var i = 0; i < this.props.songHistory.length; i++) {
       reverseSongHistory.push(this.props.songHistory[i]);
     }
