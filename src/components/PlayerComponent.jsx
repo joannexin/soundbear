@@ -87,9 +87,11 @@ class Player extends Component {
       $('.fa-play').hide();
       $('.fa-pause').show();
     }
-    if (this.props.currentSong.videoId !== player.getVideoData().video_id) {
-      player.cueVideoById(this.props.currentSong.videoId);
-      player.playVideo();
+    if(player.getVideoData) {
+      if (this.props.currentSong.videoId !== player.getVideoData().video_id) {
+        player.cueVideoById(this.props.currentSong.videoId);
+        player.playVideo();
+      }
     }
     if (this.props.mute) {
       console.log('would like to mute');
@@ -98,10 +100,12 @@ class Player extends Component {
       $('#unmute').hide();
       $('#mute').show();
     } else {
-      player.unMute();
-      $('#volumebar').val(50);
-      $('#mute').hide();
-      $('#unmute').show();
+      if (this.props.unMute) {
+        player.unMute();
+        $('#volumebar').val(50);
+        $('#mute').hide();
+        $('#unmute').show();
+      }
     }
   }
 
@@ -117,7 +121,7 @@ class Player extends Component {
               </div>
             </div>
             <button className="js-trigger-overlay-about commandsBar" onClick={ this.displayCommands.bind(this) } data-toggle="modal" data-target="#commandModal" type="button">commands</button>
-            
+
             <hr></hr>
 
             <br></br>
