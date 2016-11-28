@@ -46,7 +46,6 @@ class Album extends Component {
         listOfAlbumIds.push(uniqAlbums[i].id);
       }
       albumInfo(listOfAlbumIds).then(function (data) {
-        console.log(data.albums)
         for (var j = 0; j<data.albums.length; j++) {
           newAlbumList.push(data.albums[j])
         }
@@ -75,7 +74,6 @@ class Album extends Component {
         <div className= 'genAlbums'>
           {this.state.album.map(function(album, index){
             if (album.album_type === "album") {
-                          console.log('alb', album)
               return (
                 <div className = 'eachAlbum' key={index}>
                   <br/>

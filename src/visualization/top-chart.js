@@ -19,7 +19,6 @@ gauge.label(i)
     .offsetY(radius + '%')
     .offsetX(0);
     }
-console.log(data, dataSet)
     gauge.bar(i).dataIndex(i).radius(radius).width(width).fill(palette.colorAt(i)).stroke(null).zIndex(5);
     gauge.bar(i + 100).dataIndex(0).radius(radius).width(width).fill('#F5F4F4').stroke(stroke).zIndex(4);
     return gauge.bar(i)
@@ -30,7 +29,6 @@ module.exports = {
 
 
  processData: function(songs, id) {
-    console.log('in processData', songs)
     vidId = id;
     var storage = [];
     names = [];
@@ -96,5 +94,3 @@ getId: function () {
 }
 
 }
-
-// export default processData;
