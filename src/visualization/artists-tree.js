@@ -43,7 +43,6 @@ module.exports = {
             .call(zoomListener);
     
         function updateWindow() {
-            console.log('updateWindow called')
             viewerWidth = 1000;
             viewerHeight = 1000;
             baseSvg.attr("width", viewerWidth).attr("height", viewerHeight);

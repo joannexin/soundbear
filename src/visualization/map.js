@@ -8,7 +8,6 @@ const map = function (array) {
     for (var alpha2 of array) {
       convertedCodes.push(convertCountryCode[alpha2]);
     }
-    console.log('inside map, converted array: ', convertedCodes);
 
     // Create data object to be drawn on map
     var data = {};
