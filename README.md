@@ -1,6 +1,7 @@
 # soundBear
 
 Voice-activated music player, which provides variety of useful information for every song that plays.
+(Only supports Chrome at the moment)
 
 ## Tech Stack
 
@@ -79,6 +80,6 @@ Navigate to ```http://localhost:8080```
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for guidelines.
 
-## License 
+## License
 
 MIT

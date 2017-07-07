@@ -162,9 +162,9 @@ export const annyangCall = () => {
 
     // Starts listening
     annyang.start({ autoRestart: false, continuous: false });
+    
+    annyang.addCallback('error', () => {
+      helpers.errorMessage('Oops! Something isn\'t right...');
+    });
   }
-
-  annyang.addCallback('error', () => {
-    helpers.errorMessage('Oops! Something isn\'t right...');
-  });
 };
