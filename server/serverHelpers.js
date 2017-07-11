@@ -29,6 +29,9 @@ module.exports = {
         res.status(data.statusCode).send(data.body);
       }, function(err) {
         res.send(err.statusCode, err);
+      })
+      .catch(function(e) {
+        res.send(500, e);
       });
   },
 
@@ -39,7 +42,7 @@ module.exports = {
         res.send(data);
       })
       .catch(function(err) {
-        res.send(err.statusCode, err);
+        res.send(500, err);
       });
   },
 
@@ -53,8 +56,11 @@ module.exports = {
            res.status(tracks.statusCode).send(tracks.body);
           }, function(err) {
             res.send(err.statusCode, err);
-          })
+          });
       })
+      .catch(function(err) {
+        res.send(500, err);
+      });
   },
 
   getArtistAlbums: function (req, res) {
@@ -67,8 +73,11 @@ module.exports = {
             res.send(data.statusCode, albums.body);
           }, function(err) {
             res.send(err.statusCode, err);
-          })
+          });
       })
+      .catch(function(err) {
+        res.send(500, err);
+      });
   },
 
   getArtistInfo: function (req, res) {
@@ -78,6 +87,9 @@ module.exports = {
         res.send(data.statusCode, data.body);
       }, function(err) {
         res.send(err.statusCode, err);
+      })
+      .catch(function(err) {
+        res.send(500, err);
       });
   },
 
@@ -88,6 +100,9 @@ module.exports = {
         res.send(data.statusCode, data.body);
       }, function(err) {
         res.send(err.statusCode, err);
+      })
+      .catch(function(err) {
+        res.send(500, err);
       });
   },
 
