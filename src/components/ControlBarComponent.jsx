@@ -51,9 +51,9 @@ class ControlBar extends Component {
   }
 
   formatDuration(secs) {
-    var hr = Math.floor(secs / 3600);
-    var min = Math.floor((secs - (hr * 3600)) / 60);
-    var sec = Math.floor(secs - (hr * 3600) - (min * 60));
+    let hr = Math.floor(secs / 3600);
+    let min = Math.floor((secs - (hr * 3600)) / 60);
+    let sec = Math.floor(secs - (hr * 3600) - (min * 60));
 
     if (hr < 10) {
       hr = "0" + hr;
@@ -71,14 +71,14 @@ class ControlBar extends Component {
   }
 
   totalDuration() {
-    var totalSec = this.props.player.getDuration();
-    var totalT = this.formatDuration(totalSec);
+    let totalSec = this.props.player.getDuration();
+    let totalT = this.formatDuration(totalSec);
     this.setState({totalTime: totalT});
   }
 
   currentDuration() {
-    var currentSec = this.props.player.getCurrentTime();
-    var currentT = this.formatDuration(currentSec);
+    let currentSec = this.props.player.getCurrentTime();
+    let currentT = this.formatDuration(currentSec);
     this.setState({currentTime: currentT});
   }
 
@@ -96,17 +96,17 @@ class ControlBar extends Component {
   }
 
   volume() {
-    var currentVolume = $('#volumebar').val();
+    let currentVolume = $('#volumebar').val();
     this.props.player.setVolume(currentVolume);
   }
 
   progress(e) {
-    var totalLength = $('.progress-wrap').innerWidth();
-    var currentLength = e.pageX - $(".progress-wrap").offset().left;
-    var percentage = currentLength / totalLength;
+    let totalLength = $('.progress-wrap').innerWidth();
+    let currentLength = e.pageX - $(".progress-wrap").offset().left;
+    let percentage = currentLength / totalLength;
 
     $('.progress-bar').css("width", percentage * 100 + "%")
-    var newTime = this.props.player.getDuration() * percentage;
+    let newTime = this.props.player.getDuration() * percentage;
     this.props.player.seekTo(newTime);
   }
 
@@ -116,9 +116,9 @@ class ControlBar extends Component {
 
   componentDidMount() {
     this.muteOrUnmute.bind(this);
-    var that = this;
+    let that = this;
     setInterval(function () {
-      var percentage = that.props.player.getCurrentTime() / that.props.player.getDuration();
+      let percentage = that.props.player.getCurrentTime() / that.props.player.getDuration();
       $('.progress-bar').css("width", percentage * 100 + "%")
     }, 1000);
     setTimeout(function() {
@@ -136,7 +136,7 @@ class ControlBar extends Component {
         $('.fa-play').hide();
         $('.fa-pause').show();
       }
-    }  
+    }
   }
 
   render() {
