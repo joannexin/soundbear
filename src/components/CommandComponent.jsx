@@ -20,6 +20,7 @@ class Command extends Component {
             <h4 className="centerAlign"><b> Voice Commands </b></h4>
             <img id="closeModal" onClick={ this.displayPlayer.bind(this) } data-dismiss="modal" src="https://cdn3.iconfinder.com/data/icons/virtual-notebook/16/button_close-128.png"></img>
             <br></br>
+            
             <table className="table">
               <thead>
                 <tr className='eachRow heading'>
@@ -84,9 +85,7 @@ class Command extends Component {
                   <td className="col-xs-2">Show related artists </td>
                   <td className="col-xs-4 descript">"display related"</td>
                 </tr>
-
               </tbody>
-
             </table>
 
             <h4 className="centerAlign funchead"><b> Other Functionality </b></h4>
@@ -98,7 +97,7 @@ class Command extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
