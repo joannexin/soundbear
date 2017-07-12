@@ -10,8 +10,6 @@ import { tree }  from '../visualization/artists-tree';
 import LandingFeature from './LandingFeatureComponent';
 import Git from './GitComponent';
 
-
-
 class Landing extends Component {
 
   componentDidMount() {
