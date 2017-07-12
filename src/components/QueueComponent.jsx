@@ -7,7 +7,7 @@ import $ from 'jquery';
 class Queue extends Component {
 
   selectSongFromQueue(song) {
-    var newQueue = this.props.songQueue.filter(function(origSong) {
+    let newQueue = this.props.songQueue.filter(function(origSong) {
       if (origSong.videoId !== song.videoId) {
         return origSong;
       }
@@ -39,7 +39,6 @@ class Queue extends Component {
       return <div></div>
     }
   }
-
 }
 
 const mapStateToProps = (state) => {
