@@ -10,7 +10,7 @@ class Tree extends Component {
   }
 
   displayTree() {
-    var returnResult = tree();
+    let returnResult = tree();
     returnResult.resizeOverlay();
     if (this.props.currentSong.artistId.length === 1) {
       $('#tree-container').html('Sorry, we were unable to find related artists...');
@@ -33,7 +33,7 @@ class Tree extends Component {
 
   render() {
     return(
-      <div id="tree-container"> 
+      <div id="tree-container">
         <h1 id="topten">Related Artists</h1>
       </div>
     );
