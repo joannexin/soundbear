@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getMostPopular } from '../modules/ajax';
 
-
 class MostPopular extends Component {
   constructor(props) {
     super(props);
@@ -13,13 +12,11 @@ class MostPopular extends Component {
   }
 
   displayMostPopular() {
-    var that = this;
+    let that = this;
     getMostPopular(function(data) {
       that.setState({ result: data });
-
     });
   }
-
 
   componentDidMount() {
     this.displayMostPopular();
