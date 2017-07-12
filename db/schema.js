@@ -1,41 +1,41 @@
-var mysql = require('mysql')
-var Sequelize = require('sequelize');
-var database = new Sequelize(process.env.DATABASE_URL, {
+const mysql = require('mysql');
+const Sequelize = require('sequelize');
+const database = new Sequelize(process.env.DATABASE_URL, {
 	dialect: 'mysql'
 });
 
 database
   .authenticate()
-  .then(function(err) {
+  .then(function() {
     console.log('Connection has been established successfully.');
   })
-  .catch(function (err) {
+  .catch(function(err) {
     console.log('Unable to connect to the database:', err);
   });
 
-  var Songs = database.define('songs', {
-  	songName: {
-  		type: Sequelize.STRING
-  	},
-  	artistName: {
-  		type: Sequelize.STRING
-  	},
-		url: {
-			type: Sequelize.STRING
-		},
-    views: {
-      type: Sequelize.INTEGER
-    }
-  });
+const Songs = database.define('songs', {
+	songName: {
+		type: Sequelize.STRING
+	},
+	artistName: {
+		type: Sequelize.STRING
+	},
+	url: {
+		type: Sequelize.STRING
+	},
+  views: {
+    type: Sequelize.INTEGER
+  }
+});
 
 database
   .sync({force: false})
-  .then(function (){
+  .then(function(){
     console.log('Tables created');
- })
+ 	})
   .catch(function(err) {
-    console.log(err);
-  })
+    console.log('Tables cannot be created', err);
+  });
 
 module.exports = {
   Songs: Songs
