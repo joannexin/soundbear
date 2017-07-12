@@ -23,7 +23,7 @@ class Track extends Component {
   }
 
   displayTracks() {
-    var that = this;
+    let that = this;
     artistTracks(this.props.currentSong.artistName, function(data) {
       chart.processData(data, that.state.videoId);
       that.setState({ tracks: data, videoId: that.props.currentSong.videoId });
