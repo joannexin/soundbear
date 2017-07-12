@@ -10,7 +10,7 @@ class Lyrics extends Component {
   }
 
   displayLyrics() {
-    var that = this;
+    let that = this;
     getLyrics(this.props.currentSong.songName, this.props.currentSong.artistName, function(data) {
       that.setState({ lyrics: data, videoId: that.props.currentSong.videoId });
     });
