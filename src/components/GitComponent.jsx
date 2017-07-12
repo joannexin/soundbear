@@ -17,7 +17,7 @@ class Git extends Component {
             <div className="gitdiv col-sm-3 col-md-3 col-lg-3">
               <a href="https://github.com/alina7091" target="_blank"><img className="gitPic" src={'/assets/alinaGit.jpeg'}/></a>
               <h3>alina lobastova</h3>
-               <p id = 'mainunderline'>_________</p>
+              <p id = 'mainunderline'>_________</p>
             </div>
             <div className="gitdiv col-sm-3 col-md-3 col-lg-3">
               <a href="https://github.com/jemilezzet" target="_blank"><img className="gitPic" src={'/assets/jemilGit.jpeg'}/></a>
@@ -45,8 +45,9 @@ class Git extends Component {
         </footer>
 
         <br></br>
+
       </div>
-    )
+    );
   }
 }
 
