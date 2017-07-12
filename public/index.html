@@ -25,52 +25,25 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link href="assets/logo.png">
-    <link href="assets/siri.gif">
-    <link href="assets/spinner.gif">
-    <link href="assets/fastBackward.png">
-    <link href="assets/play.png">
-    <link href="assets/stop.png">
-    <link href="assets/fastForward.png">
-    <link href="assets/mute.png">
-    <link href="assets/unmute.png">
-    <link href="assets/playlist.png">
-    <link href="assets/worldMap.png">
-    <link href="assets/audacity.png">
-    <link href="assets/uncheck.png">
-    <link href="assets/tournament.png">
-    <link href="assets/interaction.jpg">
-    <link href="assets/sound.jpg">
-    <link href="assets/info.jpeg">
-    <link href="assets/alinaGit.jpeg">
-    <link href="assets/jemilGit.jpeg">
-    <link href="assets/joanneGit.jpeg">
-    <link href="assets/masashiGit.jpeg">
-    <link href="assets/info.png">
     <meta charset="UTF-8">
     <title>soundBear.</title>
-
   </head>
+
   <body>
     <div id="app"></div>
-
     <script type="text/javascript" src="./youTube_API_KEY.js"></script>
-
     <script type="text/javascript">
       function onClientLoad() {
-          gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
+        gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
       }
       function onYouTubeApiLoad() {
-          gapi.client.setApiKey(window.youTube);
+        gapi.client.setApiKey(window.youTube);
       }
     </script>
-
     <div id="player"></div>
-
     <script src="youTubeIframe.js"></script>
-
     <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
-
     <script src="./bundle.js"></script>
-
   </body>
+
 </html>
