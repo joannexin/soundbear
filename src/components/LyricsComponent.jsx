@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getLyrics } from '../modules/ajax';
 
 class Lyrics extends Component {
+
   constructor(props) {
     super(props);
     this.state = { lyrics: "Searching...", videoId: this.props.currentSong.videoId }
@@ -17,7 +18,6 @@ class Lyrics extends Component {
 
   componentDidMount() {
     this.displayLyrics();
-
   }
 
   componentDidUpdate() {
@@ -28,11 +28,11 @@ class Lyrics extends Component {
 
   render() {
     return(
-      <div> 
+      <div>
         <h1 id="topten">Lyrics</h1>
-      <pre id="lyrics">{this.state.lyrics}</pre>
+        <pre id="lyrics">{this.state.lyrics}</pre>
       </div>
-    )
+    );
   }
 }
 
