@@ -14,9 +14,6 @@ module.exports = {
         spotifyApi.setAccessToken(data.body['access_token']);
       }, function(err) {
         console.log('Something went wrong when retrieving an access token', err.message);
-      })
-      .catch(function(e) {
-        console.log('Something went wrong when retrieving an access token', e);
       });
   },
   getSpotifyAPI: function() {

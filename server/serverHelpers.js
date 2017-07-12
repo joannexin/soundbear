@@ -29,9 +29,8 @@ module.exports = {
         res.status(data.statusCode).send(data.body);
       }, function(err) {
         res.send(err.statusCode, err);
-      })
-      .catch(function(e) {
-        res.send(500, e);
+      }, function(err) {
+        console.error(err);
       });
   },
 
@@ -40,9 +39,8 @@ module.exports = {
       .then(function(data) {
         res.status(200);
         res.send(data);
-      })
-      .catch(function(err) {
-        res.send(500, err);
+      }, function(err) {
+        console.error(err);
       });
   },
 
@@ -57,9 +55,8 @@ module.exports = {
           }, function(err) {
             res.send(err.statusCode, err);
           });
-      })
-      .catch(function(err) {
-        res.send(500, err);
+      }, function(err) {
+        console.error(err);
       });
   },
 
@@ -74,9 +71,8 @@ module.exports = {
           }, function(err) {
             res.send(err.statusCode, err);
           });
-      })
-      .catch(function(err) {
-        res.send(500, err);
+      }, function(err) {
+        console.error(err);
       });
   },
 
@@ -87,9 +83,8 @@ module.exports = {
         res.send(data.statusCode, data.body);
       }, function(err) {
         res.send(err.statusCode, err);
-      })
-      .catch(function(err) {
-        res.send(500, err);
+      }, function(err) {
+        console.error(err);
       });
   },
 
@@ -100,9 +95,8 @@ module.exports = {
         res.send(data.statusCode, data.body);
       }, function(err) {
         res.send(err.statusCode, err);
-      })
-      .catch(function(err) {
-        res.send(500, err);
+      }, function(err) {
+        console.error(err);
       });
   },
 
