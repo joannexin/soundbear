@@ -5,7 +5,7 @@ import { changeCurrentSong, modifyHistory } from '../redux/actions';
 class History extends Component {
 
   selectSongFromQueue(song) {
-    var newHistory = this.props.songHistory.filter(function(origSong) {
+    let newHistory = this.props.songHistory.filter(function(origSong) {
       if (origSong && origSong.videoId !== song.videoId) {
         return origSong;
       }
@@ -15,11 +15,11 @@ class History extends Component {
   }
 
   render() {
-    var reverseSongHistory = [null, null, null, null, null];
-    for (var i = 0; i < this.props.songHistory.length; i++) {
+    let reverseSongHistory = [null, null, null, null, null];
+    for (let i = 0; i < this.props.songHistory.length; i++) {
       reverseSongHistory.push(this.props.songHistory[i]);
     }
-    var reverseLength = reverseSongHistory.length;
+    let reverseLength = reverseSongHistory.length;
     return (
       <div>
         {
@@ -36,11 +36,9 @@ class History extends Component {
       </div>
     );
   }
-
 }
 
 const mapStateToProps = (state) => {
-  // console.log(state);
   return {
     songHistory: state.songHistory
   };
