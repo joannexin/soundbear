@@ -19,11 +19,14 @@ class MostPopular extends Component {
   }
 
   componentDidMount() {
+    console.log("componentDidMount");
     this.displayMostPopular();
   }
 
   componentDidUpdate () {
+    console.log("componentDidUpdate");
     if (this.props.currentSong.videoId !== this.state.videoId) {
+      console.log("componentDidUpdate - videoId is different. ", this.props.currentSong.videoId, this.state.videoId);
       this.displayMostPopular();
     }
   }
