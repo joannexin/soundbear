@@ -16,7 +16,7 @@ const Models                  = require('./db/schema.js');
 const Sequelize               = require('sequelize');
 const request                 = require('request');
 const spotifyHelper           = require("./server/spotifyApiHelpers.js");
-
+const logger                  = require("./server/logger.js");
 
 const app = module.exports = express();
 
@@ -46,13 +46,14 @@ app.get('/mostPopular', helpers.getMostPopular);
 
 app.listen(process.env.PORT || 8080, function() {
   // const query = `?client_id=${spotifyConfig.spotify.clientId}`;
-  // console.log(query);
+  // logger.log(query);
   // request.post(`https://accounts.spotify.com/authorize${query}`, function(err, res, body) {
   //   if (err) {
   //     throw new Error(err);
   //   }
-  //   console.log("here is body", body);
+  //   logger.log("here is body", body);
   // });
   spotifyHelper.getAccessToken();
-  console.log('Server started, listening on port:', 8080);
+  logger.log("---------------------------------------");
+  logger.log('Server started, listening on port: ' + 8080);
 });

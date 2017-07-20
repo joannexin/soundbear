@@ -131,8 +131,9 @@ class ControlBar extends Component {
   }
 
   componentDidUpdate() {
-    if(this.props.player.getVideoData) {
-      if (this.props.player && this.props.player.getVideoData().video_id !== this.props.currentSong.videoId) {
+    if(this.props.player && this.props.player.getVideoData && this.props.currentSong) {
+      const videoData = this.props.player.getVideoData();
+      if (videoData && videoData.video_id !== this.props.currentSong.videoId) {
         $('.fa-play').hide();
         $('.fa-pause').show();
       }

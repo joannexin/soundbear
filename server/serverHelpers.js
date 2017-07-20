@@ -2,6 +2,7 @@ const spotifyHelper = require("./spotifyApiHelpers");
 const lyr = require('lyrics-fetcher');
 const Sequelize = require('sequelize');
 const Songs = require('../db/schema').Songs;
+const logger = require("./logger.js");
 
 module.exports = {
   getSpotifyData: function(req, res) {
@@ -27,6 +28,7 @@ module.exports = {
           })
         res.status(data.statusCode).send(data.body);
       }, function(err) {
+        logger.error("Failed to get Spotify Data " + err);
         res.send(err.statusCode, err);
       });
   },
@@ -35,6 +37,7 @@ module.exports = {
       .then(function(data) {
         res.send(200, data);
       }, function(err) {
+        logger.error("Failed to get Most Popular " + err);
         res.send(err.statusCode, err);
       });
   },
@@ -50,6 +53,7 @@ module.exports = {
             res.send(err.statusCode, err);
           });
       }, function(err) {
+        logger.error("Failed to get Spotify Top Tracks " + err);
         res.send(err.statusCode, err);
       });
   },
@@ -65,6 +69,7 @@ module.exports = {
             res.send(err.statusCode, err);
           });
       }, function(err) {
+        logger.error("Failed to get Spotify Artist Data " + err);
         res.send(err.statusCode, err);
       });
   },
@@ -74,6 +79,7 @@ module.exports = {
       .then(function(data) {
         res.send(data.statusCode, data.body);
       }, function(err) {
+        logger.error("Failed to get Spotify Artist Info " + err);
         res.send(err.statusCode, err);
       });
   },
@@ -83,6 +89,7 @@ module.exports = {
       .then(function(data) {
         res.send(data.statusCode, data.body);
       }, function(err) {
+        logger.error("Failed to get Spotify Album Info " + err);
         res.send(err.statusCode, err);
       });
   },
