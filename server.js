@@ -53,7 +53,8 @@ app.listen(process.env.PORT || 8080, function() {
   //   }
   //   logger.log("here is body", body);
   // });
-  spotifyHelper.getAccessToken();
+  const timer = setInterval(() => { spotifyHelper.getAccessToken(); }, 3600000);
+
   logger.log("---------------------------------------");
   logger.log('Server started, listening on port: ' + 8080);
 });
