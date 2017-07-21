@@ -45,14 +45,7 @@ app.get('/mostPopular', helpers.getMostPopular);
 
 
 app.listen(process.env.PORT || 8080, function() {
-  // const query = `?client_id=${spotifyConfig.spotify.clientId}`;
-  // logger.log(query);
-  // request.post(`https://accounts.spotify.com/authorize${query}`, function(err, res, body) {
-  //   if (err) {
-  //     throw new Error(err);
-  //   }
-  //   logger.log("here is body", body);
-  // });
+  spotifyHelper.getAccessToken();
   const timer = setInterval(() => { spotifyHelper.getAccessToken(); }, 3600000);
 
   logger.log("---------------------------------------");
